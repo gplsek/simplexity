@@ -1,0 +1,12 @@
+name: rocket_chat
+description: Rocket.Chat Livechat integration module.
+package: Rocket.Chat
+configure: rocket_chat.admin_settings
+type: module
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2017-01-02
+version: '8.x-1.0-alpha1+0-dev'
+core: '8.x'
+project: 'rocket_chat'
+datestamp: 1483373947

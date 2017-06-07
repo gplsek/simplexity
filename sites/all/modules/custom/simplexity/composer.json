@@ -1,0 +1,10 @@
+{
+  "name": "drupal/simplexity",
+  "type": "drupal-module",
+  "description": "Provides Simplexity Company SEttings.",
+  "homepage": "http://simplexity.com",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/core": "~8.1"
+  }
+}
