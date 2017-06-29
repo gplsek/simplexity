@@ -1,0 +1,39 @@
+<?php
+/*
+ * @file
+ * code for simplexity module
+*/
+
+use Drupal\user\Entity\User;
+
+
+function simplexity_create_company_admin($email){
+
+	//$user = user_load_by_mail($email);
+
+	//print_r($user);die();
+
+	$language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $user = \Drupal\user\Entity\User::create();
+
+//Mandatory settings
+    $user->setPassword('password');
+    $user->enforceIsNew();
+    $user->setEmail('email');
+    $user->setUsername('user_name');//This username must be unique and accept only a-Z,0-9, - _ @ .
+
+//Optional settings
+    $user->set("init", 'email');
+    $user->set("langcode", $language);
+    $user->set("preferred_langcode", $language);
+    $user->set("preferred_admin_langcode", $language);
+    //$user->set("setting_name", 'setting_value');
+    $user->activate();
+
+//Save user
+    $res = $user->save();
+
+    return $user->id();
+}
+
+?>

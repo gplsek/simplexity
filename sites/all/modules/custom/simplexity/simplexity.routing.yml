@@ -1,0 +1,7 @@
+simplexity.form:
+ path: '/simplexity/createCompany'
+ defaults:
+   _title: 'Create New Company'
+   _form: '\Drupal\simplexity\Form\CompanyForm'
+ requirements:
+   _permission: 'access content'
